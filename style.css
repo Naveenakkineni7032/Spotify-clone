@@ -1,0 +1,318 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 90px);
+    padding: 8px;
+    gap: 8px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    background: #121212;
+    border-radius: 10px;
+    padding: 25px 15px;
+    flex-shrink: 0;
+}
+
+.logo {
+    color: #1ed760;
+    margin-bottom: 35px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: #b3b3b3;
+    text-decoration: none;
+    padding: 13px 5px;
+    font-weight: bold;
+}
+
+.sidebar nav a:hover {
+    color: white;
+}
+
+.playlist {
+    margin-top: 35px;
+    color: #b3b3b3;
+}
+
+.playlist h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.playlist p {
+    margin: 15px 0;
+}
+
+/* Main Content */
+.main {
+    flex: 1;
+    background: linear-gradient(#252525, #121212 40%);
+    border-radius: 10px;
+    padding: 25px;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.arrows button {
+    background: #050505;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.login {
+    background: white;
+    color: black;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-weight: bold;
+}
+
+h1 {
+    margin-bottom: 25px;
+}
+
+/* Quick Playlist */
+.quick {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.quick-card {
+    display: flex;
+    align-items: center;
+    background: #303030;
+    border-radius: 5px;
+    overflow: hidden;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.quick-card:hover {
+    background: #454545;
+}
+
+.quick-card img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* Song Cards */
+h2 {
+    margin-bottom: 20px;
+}
+
+.songs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.song-card {
+    background: #181818;
+    padding: 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.song-card:hover {
+    background: #282828;
+}
+
+.song-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+.song-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.song-card p {
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+/* Bottom Player */
+.player {
+    height: 90px;
+    background: #080808;
+    border-top: 1px solid #282828;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 15px;
+}
+
+.current-song {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 25%;
+}
+
+.current-song img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+}
+
+.current-song h4 {
+    font-size: 14px;
+}
+
+.current-song p {
+    color: #b3b3b3;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.controls {
+    width: 45%;
+    text-align: center;
+}
+
+.buttons button {
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    margin: 0 12px;
+}
+
+.buttons .play {
+    background: white;
+    color: black;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    color: #b3b3b3;
+    margin-top: 8px;
+}
+
+.progress input {
+    flex: 1;
+    accent-color: #1ed760;
+}
+
+.volume {
+    width: 20%;
+    text-align: right;
+}
+
+.volume input {
+    width: 80px;
+    accent-color: #1ed760;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 170px;
+    }
+
+    .songs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quick {
+        grid-template-columns: 1fr;
+    }
+
+    .volume {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .sidebar {
+        width: 65px;
+        padding: 15px 5px;
+    }
+
+    .logo {
+        font-size: 12px;
+    }
+
+    .sidebar nav a {
+        font-size: 11px;
+        padding: 12px 0;
+    }
+
+    .playlist {
+        display: none;
+    }
+
+    .main {
+        padding: 15px;
+    }
+
+    .songs {
+        grid-template-columns: 1fr;
+    }
+
+    .current-song {
+        width: 40%;
+    }
+
+    .current-song img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .current-song h4 {
+        font-size: 11px;
+    }
+
+    .controls {
+        width: 60%;
+    }
+
+    .buttons button {
+        margin: 0 5px;
+    }
+}

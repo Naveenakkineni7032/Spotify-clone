@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">🟢 Spotify</h2>
+
+            <nav>
+                <a href="#">🏠 Home</a>
+                <a href="#">🔍 Search</a>
+                <a href="#">📚 Your Library</a>
+            </nav>
+
+            <div class="playlist">
+                <h3>Your Playlists</h3>
+                <p>❤️ Liked Songs</p>
+                <p>🎵 My Playlist</p>
+                <p>🎧 Favourite Music</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+
+            <header>
+                <div class="arrows">
+                    <button>❮</button>
+                    <button>❯</button>
+                </div>
+                <button class="login">Log In</button>
+            </header>
+
+            <h1>Good Afternoon</h1>
+
+            <!-- Quick Playlist -->
+            <section class="quick">
+                <div class="quick-card">
+                    <img src="https://picsum.photos/100?random=1">
+                    <span>Liked Songs</span>
+                </div>
+
+                <div class="quick-card">
+                    <img src="https://picsum.photos/100?random=2">
+                    <span>Daily Mix</span>
+                </div>
+
+                <div class="quick-card">
+                    <img src="https://picsum.photos/100?random=3">
+                    <span>Top Hits</span>
+                </div>
+
+                <div class="quick-card">
+                    <img src="https://picsum.photos/100?random=4">
+                    <span>My Music</span>
+                </div>
+            </section>
+
+            <!-- Trending Songs -->
+            <h2>Trending Songs</h2>
+
+            <section class="songs">
+
+                <div class="song-card">
+                    <img src="https://picsum.photos/200?random=5">
+                    <h3>Summer Vibes</h3>
+                    <p>Relaxing Music</p>
+                </div>
+
+                <div class="song-card">
+                    <img src="https://picsum.photos/200?random=6">
+                    <h3>Night Changes</h3>
+                    <p>Pop Music</p>
+                </div>
+
+                <div class="song-card">
+                    <img src="https://picsum.photos/200?random=7">
+                    <h3>Love Songs</h3>
+                    <p>Romantic Music</p>
+                </div>
+
+                <div class="song-card">
+                    <img src="https://picsum.photos/200?random=8">
+                    <h3>Party Mix</h3>
+                    <p>Dance Music</p>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- Music Player -->
+    <footer class="player">
+        <div class="current-song">
+            <img src="https://picsum.photos/60?random=5">
+            <div>
+                <h4>Summer Vibes</h4>
+                <p>Relaxing Music</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="buttons">
+                <button>⏮</button>
+                <button class="play">▶</button>
+                <button>⏭</button>
+            </div>
+            <div class="progress">
+                <span>0:00</span>
+                <input type="range" min="0" max="100" value="30">
+                <span>3:30</span>
+            </div>
+        </div>
+
+        <div class="volume">
+            🔊 <input type="range" min="0" max="100" value="70">
+        </div>
+    </footer>
+
+</body>
+</html>
